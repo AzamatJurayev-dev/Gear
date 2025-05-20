@@ -1,12 +1,17 @@
 module.exports = {
-    darkMode: 'class',
-    corePlugins: {
-      preflight: true,
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class', 
+  theme: {
+    extend: {
+      colors: {
+        primary: "#1F2E35",
+        secondary: "#475E69",
+        subtext: "#30444E",
+        background: "#FFFFFF",
+        darkbg: "#1F2E35",
+        darktext: "#FFFFFF",
+      },
     },
-    content: ['./src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  };
-  
+  },
+  plugins: [],
+}

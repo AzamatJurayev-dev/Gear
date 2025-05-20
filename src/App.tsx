@@ -1,4 +1,4 @@
-import { HeaderView } from "./components/Navbar"
+import Navbar from "./components/Navbar"
 import "./App.css"
 import Main from "./components/Main"
 import Popular  from "./components/Popular"
@@ -7,18 +7,22 @@ import Comer from "./components/Comer"
 import Testimonial from "./components/Testimonial"
 import Subscribe from "./components/Subscribe"
 import Footer from "./components/Footer"
+
 const App = () => {
+
   return (
-    <div className="mx-32">
-      <HeaderView/>
+    <>
+      <Navbar/>
+      <div className="lg:px-32 md:px-10 px-6">
       <Main/>
       <Popular/>
       <Brands/>
       <Comer/>
       <Testimonial/>
       <Subscribe/>
-      <Footer/>
     </div>
+    <Footer/>
+    </>
   )
 }
 

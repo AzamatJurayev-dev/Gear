@@ -1,21 +1,17 @@
-// import { Button, Flex } from "antd";
 import Hero from "../assets/Hero.png";
-// import oval from "../assets/oval.png";
-// import oval2 from "../assets/oval2.png";
-// import xd from "../assets/xd.png";
-// import invision from "../assets/invision.png";
+
 
 import { Button, Col, Row } from "antd";
 
 const Main = () => {
   return (
-  <div>
-      <Row>
+  <div className="md:my-20 my-6">
+      <Row gutter={[20,20]} align="middle"> 
       <Col  lg={12} sm={24}>
-         <h1 className="heading">
+         <h1 className="font-poppins  font-semibold md:text-[40px] text-[30px] leading-[61px] tracking-[0.2px] align-middle !text-secondary">
           Tools untuk Designer, Developer, dan Business Owner
         </h1>
-        <p className="subtext">
+        <p className="font-poppins mr-25 bg-primary font-normal text-[18px] leading-[36.5px] tracking-[0.2px] align-middle text-secondary">
           Informasi tentang tool-tool design dan developer yang terbaru dan
           terpopular di seluruh dunia.
         </p>
@@ -34,47 +30,3 @@ const Main = () => {
 };
 
 export default Main;
-
-
-{/* <Flex
-      align="center"
-      justify="space-between"
-      gap={60}
-      style={{ padding: "0 10rem", height: "90vh" }}
-    >
-      <Flex vertical gap={20} align="start">
-        <h1 className="heading">
-          Tools untuk Designer, Developer, dan Business Owner
-        </h1>
-        <p className="subtext">
-          Informasi tentang tool-tool design dan developer yang terbaru dan
-          terpopular di seluruh dunia.
-        </p>
-        <Button type="primary" size="large" className="rounded-full">
-          Explore now
-        </Button>
-        <Flex className="tools" gap={40}>
-          <Flex gap={80}>
-            <Flex align="center">
-              <img src={oval} alt="" />
-              <img src={oval2} alt="" />
-            </Flex>
-            <p>
-              <span>4.00</span>+User
-            </p>
-          </Flex>
-          <Flex gap={80}>
-            <Flex align="center">
-              <img src={invision} alt="" />
-              <img src={xd} alt="" />
-            </Flex>
-            <p>
-              <span>100</span>+Tools
-            </p>
-          </Flex>
-        </Flex>
-      </Flex>
-      <div className="w-260">
-        <img src={Hero} alt="" />
-      </div>
-    </Flex> */}
