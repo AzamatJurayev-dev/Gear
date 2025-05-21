@@ -2,9 +2,8 @@ import Logo from "../assets/Logo.png";
 import mode from "../assets/mode.png";
 import { Flex, Menu, Drawer, Button } from "antd";
 import type { MenuProps } from "antd";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MenuOutlined } from "@ant-design/icons";
-import { useThemeStore } from "../store/themeStore";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -18,15 +17,7 @@ const Navbar = () => {
   const [current, setCurrent] = useState("1");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const { theme, toggleTheme } = useThemeStore();
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+  
 
   const onClick: MenuProps["onClick"] = (e) => {
     setCurrent(e.key);
@@ -54,8 +45,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <button
-          onClick={toggleTheme}>
+          <button>
             <img
             src={mode}
             alt="Mode"
@@ -88,7 +78,6 @@ const Navbar = () => {
         />
         <div className="mt-4">
           <img
-            onClick={toggleTheme}
             src={mode}
             alt="Mode toggle"
             className="w-8 cursor-pointer"
